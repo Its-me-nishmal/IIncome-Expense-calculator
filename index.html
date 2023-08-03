@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Income Expense Calculator By Nishmal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
 <body>
+    <header>
+        <p>Income / Expense Calculator</p>
+    </header>
+    <div id="main">
+        <div class="d1">
+            <label for="categories" id="l1">Choose a category:</label>
+            <input type="text" id="categories" name="categories" list="categoryList">
+            <datalist id="categoryList">
+                <!-- Income Categories -->
+                <option value="Salary">
+                <option value="Business">
+                <option value="Rental">
+                <option value="Investment">
+                <option value="Freelance">
+                <option value="Commission">
+                <option value="Pension">
+                <option value="Social Security">
+                <option value="Alimony">
+                <option value="Gifts">
+                <option value="Other">
 
-<h1>JavaScript Variables</h1>
+                    <!-- Expense Categories -->
+                <option value="Housing">
+                <option value="Transportation">
+                <option value="Food">
+                <option value="Health">
+                <option value="Insurance">
+                <option value="Debt Payments">
+                <option value="Entertainment">
+                <option value="Education">
+                <option value="Savings">
+                <option value="Charitable">
+                <option value="Childcare">
+                <option value="Personal Care">
+                <option value="Taxes">
+                <option value="Miscellaneous">
+            </datalist>
+            <br>
+        </div>
+        <div class="d1">
+            <label for="categories" id="l2">Enter Value(INR) : </label>
+            <input type="number" id="val" name="value">
+        </div>
+        <div class="d2">
+            <button id="cnl">Clear</button>
+            <button id="add">Add Value</button>
+        </div>
+        <div class="d3">
+            <table class="t1">
+                <tr>
+                    <th>Categories</td>
+                    <th>Value</td>
+                </tr>
+                <tbody class="scrollable-tbody">
 
-<p>The result of adding "5" + 2 + 3 is:</p>
-<p id="demo"></p>
+                </tbody>
+            </table>
+            <div class="d31">
+                <div class="d311">Total Balance</div>
+                <div class="d312"><strong id="total">00</strong></div>
+            </div>
+        </div>
+        <canvas id="myChart" style="width:100%;max-width:500px"></canvas>
+        <p id="pl"></p>
 
-<script>
-let x = "5" + 2 + 3;
-document.getElementById("demo").innerHTML = x;
-</script>
+    </div>
 
+    <div id="myDialog"
+        style="display: none; border-radius: 10px; background-color: rgb(0, 0, 0,.5); border: 1px solid #000; padding: 15px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <p class="oo">Select Category ?</p>
+        <button class="pp1" onclick="handleNo()">Income</button>
+        <button class="pp2" onclick="handleYes()">Expense</button>
+    </div>
+    <script src="ok.js"></script>
 </body>
+
 </html>
